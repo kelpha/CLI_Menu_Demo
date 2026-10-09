@@ -1,3 +1,9 @@
+/**
+ * @file cli_menu.h
+ * @brief Defines the CLI menu and item types.
+ *
+ * Items can invoke an action callback or open a submenu.
+ */
 #ifndef CLI_MENU_H
 #define CLI_MENU_H
 

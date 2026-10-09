@@ -6,7 +6,12 @@
 namespace Calculator {
     class Standard : public CLI::Menu {
     public:
-        Standard(const char* title = "Standard Menu");
+        Standard(const char* title = "Standard Menu") : CLI::Menu(title) {
+            CLI::Menu::add(addItem);
+            CLI::Menu::add(subtractItem);
+            CLI::Menu::add(multiplyItem);
+            CLI::Menu::add(divideItem);
+        }
 
         static void add(CLI::Menu* menu) {
             std::cout << "Performing addition..." << std::endl;
